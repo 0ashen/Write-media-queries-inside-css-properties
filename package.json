@@ -1,0 +1,11 @@
+{
+  "name": "responsive-css-properties",
+  "version": "1.0.0",
+  "description": "function for writting css media queries inside css properties",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
