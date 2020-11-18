@@ -1,11 +1,9 @@
+import { IBreakpoints } from './index'
+
 export type CssPropertyValue = string | number;
 
 export type IBreakpointsKey = keyof IBreakpoints;
-export interface IBreakpoints {
-    all?: CssPropertyValue
-    mb_tablet?: CssPropertyValue
-    mb_mob?: CssPropertyValue
-}
+
 
 
 export type ICssPropertyKey = keyof CssProperty;

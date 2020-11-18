@@ -1,5 +1,10 @@
-import { CssProperty, CssPropertyValue, IBreakpoints, IBreakpointsKey, ICssPropertyKey } from './index.interface'
+import { CssProperty, CssPropertyValue, IBreakpointsKey, ICssPropertyKey } from './index.interface'
 
+export interface IBreakpoints {
+    all?: CssPropertyValue
+    mb_tablet?: CssPropertyValue
+    mb_mob?: CssPropertyValue
+}
 const splitBreakpoints: IBreakpoints = {
     all: '',
     mb_tablet: '',

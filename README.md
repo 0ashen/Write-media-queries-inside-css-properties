@@ -1,7 +1,7 @@
 ## Write-media-queries-inside-css-properties
 
 Usage example 
-```javascript
+```typescript
     media({
         fontSize: { all: '10px', mb_tablet: '20px', mb_mob: '30px'},
         width: {all: '200px', mb_tablet: '150px', mb_mob: '100px'}
@@ -22,7 +22,12 @@ Output
 }
 ```
 Set breakpoints
-```javascript
+```typescript
+export interface IBreakpoints {
+    all?: CssPropertyValue
+    mb_tablet?: CssPropertyValue
+    mb_mob?: CssPropertyValue
+}
 const splitBreakpoints: IBreakpoints = {
     all: '',
     mb_tablet: '',
