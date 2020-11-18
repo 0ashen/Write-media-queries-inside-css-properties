@@ -16,7 +16,6 @@ const breakpoints = {
     mb_mob: 700
 }
 
-// каждый в начале ts писал как подазреваю в таком же стиле хуйню
 export function media(styles: CssProperty): string {
     let response: string = ''
 
