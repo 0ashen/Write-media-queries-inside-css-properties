@@ -1,473 +1,472 @@
-export interface BreakpointsKey {
-    mb_all: string
-    mb_tablet?: string
-    mb_mob?: string
+export type CssPropertyValue = string;
+
+export type IBreakpointsKey = keyof IBreakpoints;
+export interface IBreakpoints {
+    all?: CssPropertyValue
+    mb_tablet?: CssPropertyValue
+    mb_mob?: CssPropertyValue
 }
 
-export enum BreakpointsValue {
-    mb_all = 'all',
-    mb_tablet = '1300px',
-    mb_mob = '700px'
-}
 
-export interface CssQuery {
-    alignContent?: BreakpointsKey
-    alignItems?: BreakpointsKey
-    alignSelf?: BreakpointsKey
-    alignmentBaseline?: BreakpointsKey
-    all?: BreakpointsKey
-    animation?: BreakpointsKey
-    animationDelay?: BreakpointsKey
-    animationDirection?: BreakpointsKey
-    animationDuration?: BreakpointsKey
-    animationFillMode?: BreakpointsKey
-    animationIterationCount?: BreakpointsKey
-    animationName?: BreakpointsKey
-    animationPlayState?: BreakpointsKey
-    animationTimingFunction?: BreakpointsKey
-    backfaceVisibility?: BreakpointsKey
-    background?: BreakpointsKey
-    backgroundAttachment?: BreakpointsKey
-    backgroundClip?: BreakpointsKey
-    backgroundColor?: BreakpointsKey
-    backgroundImage?: BreakpointsKey
-    backgroundOrigin?: BreakpointsKey
-    backgroundPosition?: BreakpointsKey
-    backgroundPositionX?: BreakpointsKey
-    backgroundPositionY?: BreakpointsKey
-    backgroundRepeat?: BreakpointsKey
-    backgroundSize?: BreakpointsKey
-    baselineShift?: BreakpointsKey
-    blockSize?: BreakpointsKey
-    border?: BreakpointsKey
-    borderBlockEnd?: BreakpointsKey
-    borderBlockEndColor?: BreakpointsKey
-    borderBlockEndStyle?: BreakpointsKey
-    borderBlockEndWidth?: BreakpointsKey
-    borderBlockStart?: BreakpointsKey
-    borderBlockStartColor?: BreakpointsKey
-    borderBlockStartStyle?: BreakpointsKey
-    borderBlockStartWidth?: BreakpointsKey
-    borderBottom?: BreakpointsKey
-    borderBottomColor?: BreakpointsKey
-    borderBottomLeftRadius?: BreakpointsKey
-    borderBottomRightRadius?: BreakpointsKey
-    borderBottomStyle?: BreakpointsKey
-    borderBottomWidth?: BreakpointsKey
-    borderCollapse?: BreakpointsKey
-    borderColor?: BreakpointsKey
-    borderImage?: BreakpointsKey
-    borderImageOutset?: BreakpointsKey
-    borderImageRepeat?: BreakpointsKey
-    borderImageSlice?: BreakpointsKey
-    borderImageSource?: BreakpointsKey
-    borderImageWidth?: BreakpointsKey
-    borderInlineEnd?: BreakpointsKey
-    borderInlineEndColor?: BreakpointsKey
-    borderInlineEndStyle?: BreakpointsKey
-    borderInlineEndWidth?: BreakpointsKey
-    borderInlineStart?: BreakpointsKey
-    borderInlineStartColor?: BreakpointsKey
-    borderInlineStartStyle?: BreakpointsKey
-    borderInlineStartWidth?: BreakpointsKey
-    borderLeft?: BreakpointsKey
-    borderLeftColor?: BreakpointsKey
-    borderLeftStyle?: BreakpointsKey
-    borderLeftWidth?: BreakpointsKey
-    borderRadius?: BreakpointsKey
-    borderRight?: BreakpointsKey
-    borderRightColor?: BreakpointsKey
-    borderRightStyle?: BreakpointsKey
-    borderRightWidth?: BreakpointsKey
-    borderSpacing?: BreakpointsKey
-    borderStyle?: BreakpointsKey
-    borderTop?: BreakpointsKey
-    borderTopColor?: BreakpointsKey
-    borderTopLeftRadius?: BreakpointsKey
-    borderTopRightRadius?: BreakpointsKey
-    borderTopStyle?: BreakpointsKey
-    borderTopWidth?: BreakpointsKey
-    borderWidth?: BreakpointsKey
-    bottom?: BreakpointsKey
-    boxShadow?: BreakpointsKey
-    boxSizing?: BreakpointsKey
-    breakAfter?: BreakpointsKey
-    breakBefore?: BreakpointsKey
-    breakInside?: BreakpointsKey
-    captionSide?: BreakpointsKey
-    caretColor?: BreakpointsKey
-    clear?: BreakpointsKey
-    clip?: BreakpointsKey
-    clipPath?: BreakpointsKey
-    clipRule?: BreakpointsKey
-    color?: BreakpointsKey
-    colorInterpolation?: BreakpointsKey
-    colorInterpolationFilters?: BreakpointsKey
-    columnCount?: BreakpointsKey
-    columnFill?: BreakpointsKey
-    columnGap?: BreakpointsKey
-    columnRule?: BreakpointsKey
-    columnRuleColor?: BreakpointsKey
-    columnRuleStyle?: BreakpointsKey
-    columnRuleWidth?: BreakpointsKey
-    columnSpan?: BreakpointsKey
-    columnWidth?: BreakpointsKey
-    columns?: BreakpointsKey
-    content?: BreakpointsKey
-    counterIncrement?: BreakpointsKey
-    counterReset?: BreakpointsKey
-    cssFloat?: BreakpointsKey
-    cssText?: BreakpointsKey
-    cursor?: BreakpointsKey
-    direction?: BreakpointsKey
-    display?: BreakpointsKey
-    dominantBaseline?: BreakpointsKey
-    emptyCells?: BreakpointsKey
-    fill?: BreakpointsKey
-    fillOpacity?: BreakpointsKey
-    fillRule?: BreakpointsKey
-    filter?: BreakpointsKey
-    flex?: BreakpointsKey
-    flexBasis?: BreakpointsKey
-    flexDirection?: BreakpointsKey
-    flexFlow?: BreakpointsKey
-    flexGrow?: BreakpointsKey
-    flexShrink?: BreakpointsKey
-    flexWrap?: BreakpointsKey
-    float?: BreakpointsKey
-    floodColor?: BreakpointsKey
-    floodOpacity?: BreakpointsKey
-    font?: BreakpointsKey
-    fontFamily?: BreakpointsKey
-    fontFeatureSettings?: BreakpointsKey
-    fontKerning?: BreakpointsKey
-    fontSize?: BreakpointsKey
-    fontSizeAdjust?: BreakpointsKey
-    fontStretch?: BreakpointsKey
-    fontStyle?: BreakpointsKey
-    fontSynthesis?: BreakpointsKey
-    fontVariant?: BreakpointsKey
-    fontVariantCaps?: BreakpointsKey
-    fontVariantEastAsian?: BreakpointsKey
-    fontVariantLigatures?: BreakpointsKey
-    fontVariantNumeric?: BreakpointsKey
-    fontVariantPosition?: BreakpointsKey
-    fontWeight?: BreakpointsKey
-    gap?: BreakpointsKey
-    glyphOrientationVertical?: BreakpointsKey
-    grid?: BreakpointsKey
-    gridArea?: BreakpointsKey
-    gridAutoColumns?: BreakpointsKey
-    gridAutoFlow?: BreakpointsKey
-    gridAutoRows?: BreakpointsKey
-    gridColumn?: BreakpointsKey
-    gridColumnEnd?: BreakpointsKey
-    gridColumnGap?: BreakpointsKey
-    gridColumnStart?: BreakpointsKey
-    gridGap?: BreakpointsKey
-    gridRow?: BreakpointsKey
-    gridRowEnd?: BreakpointsKey
-    gridRowGap?: BreakpointsKey
-    gridRowStart?: BreakpointsKey
-    gridTemplate?: BreakpointsKey
-    gridTemplateAreas?: BreakpointsKey
-    gridTemplateColumns?: BreakpointsKey
-    gridTemplateRows?: BreakpointsKey
-    height?: BreakpointsKey
-    hyphens?: BreakpointsKey
-    imageOrientation?: BreakpointsKey
-    imageRendering?: BreakpointsKey
-    inlineSize?: BreakpointsKey
-    justifyContent?: BreakpointsKey
-    justifyItems?: BreakpointsKey
-    justifySelf?: BreakpointsKey
-    left?: BreakpointsKey
-    readonly length?: number;
-    letterSpacing?: BreakpointsKey
-    lightingColor?: BreakpointsKey
-    lineBreak?: BreakpointsKey
-    lineHeight?: BreakpointsKey
-    listStyle?: BreakpointsKey
-    listStyleImage?: BreakpointsKey
-    listStylePosition?: BreakpointsKey
-    listStyleType?: BreakpointsKey
-    margin?: BreakpointsKey
-    marginBlockEnd?: BreakpointsKey
-    marginBlockStart?: BreakpointsKey
-    marginBottom?: BreakpointsKey
-    marginInlineEnd?: BreakpointsKey
-    marginInlineStart?: BreakpointsKey
-    marginLeft?: BreakpointsKey
-    marginRight?: BreakpointsKey
-    marginTop?: BreakpointsKey
-    marker?: BreakpointsKey
-    markerEnd?: BreakpointsKey
-    markerMid?: BreakpointsKey
-    markerStart?: BreakpointsKey
-    mask?: BreakpointsKey
-    maskComposite?: BreakpointsKey
-    maskImage?: BreakpointsKey
-    maskPosition?: BreakpointsKey
-    maskRepeat?: BreakpointsKey
-    maskSize?: BreakpointsKey
-    maskType?: BreakpointsKey
-    maxBlockSize?: BreakpointsKey
-    maxHeight?: BreakpointsKey
-    maxInlineSize?: BreakpointsKey
-    maxWidth?: BreakpointsKey
-    minBlockSize?: BreakpointsKey
-    minHeight?: BreakpointsKey
-    minInlineSize?: BreakpointsKey
-    minWidth?: BreakpointsKey
-    objectFit?: BreakpointsKey
-    objectPosition?: BreakpointsKey
-    opacity?: BreakpointsKey
-    order?: BreakpointsKey
-    orphans?: BreakpointsKey
-    outline?: BreakpointsKey
-    outlineColor?: BreakpointsKey
-    outlineOffset?: BreakpointsKey
-    outlineStyle?: BreakpointsKey
-    outlineWidth?: BreakpointsKey
-    overflow?: BreakpointsKey
-    overflowAnchor?: BreakpointsKey
-    overflowWrap?: BreakpointsKey
-    overflowX?: BreakpointsKey
-    overflowY?: BreakpointsKey
-    overscrollBehavior?: BreakpointsKey
-    overscrollBehaviorBlock?: BreakpointsKey
-    overscrollBehaviorInline?: BreakpointsKey
-    overscrollBehaviorX?: BreakpointsKey
-    overscrollBehaviorY?: BreakpointsKey
-    padding?: BreakpointsKey
-    paddingBlockEnd?: BreakpointsKey
-    paddingBlockStart?: BreakpointsKey
-    paddingBottom?: BreakpointsKey
-    paddingInlineEnd?: BreakpointsKey
-    paddingInlineStart?: BreakpointsKey
-    paddingLeft?: BreakpointsKey
-    paddingRight?: BreakpointsKey
-    paddingTop?: BreakpointsKey
-    pageBreakAfter?: BreakpointsKey
-    pageBreakBefore?: BreakpointsKey
-    pageBreakInside?: BreakpointsKey
-    paintOrder?: BreakpointsKey
-    readonly parentRule?: CSSRule | null;
-    perspective?: BreakpointsKey
-    perspectiveOrigin?: BreakpointsKey
-    placeContent?: BreakpointsKey
-    placeItems?: BreakpointsKey
-    placeSelf?: BreakpointsKey
-    pointerEvents?: BreakpointsKey
-    position?: BreakpointsKey
-    quotes?: BreakpointsKey
-    resize?: BreakpointsKey
-    right?: BreakpointsKey
-    rotate?: BreakpointsKey
-    rowGap?: BreakpointsKey
-    rubyAlign?: BreakpointsKey
-    rubyPosition?: BreakpointsKey
-    scale?: BreakpointsKey
-    scrollBehavior?: BreakpointsKey
-    shapeRendering?: BreakpointsKey
-    stopColor?: BreakpointsKey
-    stopOpacity?: BreakpointsKey
-    stroke?: BreakpointsKey
-    strokeDasharray?: BreakpointsKey
-    strokeDashoffset?: BreakpointsKey
-    strokeLinecap?: BreakpointsKey
-    strokeLinejoin?: BreakpointsKey
-    strokeMiterlimit?: BreakpointsKey
-    strokeOpacity?: BreakpointsKey
-    strokeWidth?: BreakpointsKey
-    tabSize?: BreakpointsKey
-    tableLayout?: BreakpointsKey
-    textAlign?: BreakpointsKey
-    textAlignLast?: BreakpointsKey
-    textAnchor?: BreakpointsKey
-    textCombineUpright?: BreakpointsKey
-    textDecoration?: BreakpointsKey
-    textDecorationColor?: BreakpointsKey
-    textDecorationLine?: BreakpointsKey
-    textDecorationStyle?: BreakpointsKey
-    textEmphasis?: BreakpointsKey
-    textEmphasisColor?: BreakpointsKey
-    textEmphasisPosition?: BreakpointsKey
-    textEmphasisStyle?: BreakpointsKey
-    textIndent?: BreakpointsKey
-    textJustify?: BreakpointsKey
-    textOrientation?: BreakpointsKey
-    textOverflow?: BreakpointsKey
-    textRendering?: BreakpointsKey
-    textShadow?: BreakpointsKey
-    textTransform?: BreakpointsKey
-    textUnderlinePosition?: BreakpointsKey
-    top?: BreakpointsKey
-    touchAction?: BreakpointsKey
-    transform?: BreakpointsKey
-    transformBox?: BreakpointsKey
-    transformOrigin?: BreakpointsKey
-    transformStyle?: BreakpointsKey
-    transition?: BreakpointsKey
-    transitionDelay?: BreakpointsKey
-    transitionDuration?: BreakpointsKey
-    transitionProperty?: BreakpointsKey
-    transitionTimingFunction?: BreakpointsKey
-    translate?: BreakpointsKey
-    unicodeBidi?: BreakpointsKey
-    userSelect?: BreakpointsKey
-    verticalAlign?: BreakpointsKey
-    visibility?: BreakpointsKey
-    /** @deprecated */
-    webkitAlignContent?: BreakpointsKey
-    /** @deprecated */
-    webkitAlignItems?: BreakpointsKey
-    /** @deprecated */
-    webkitAlignSelf?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimation?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationDelay?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationDirection?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationDuration?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationFillMode?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationIterationCount?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationName?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationPlayState?: BreakpointsKey
-    /** @deprecated */
-    webkitAnimationTimingFunction?: BreakpointsKey
-    /** @deprecated */
-    webkitAppearance?: BreakpointsKey
-    /** @deprecated */
-    webkitBackfaceVisibility?: BreakpointsKey
-    /** @deprecated */
-    webkitBackgroundClip?: BreakpointsKey
-    /** @deprecated */
-    webkitBackgroundOrigin?: BreakpointsKey
-    /** @deprecated */
-    webkitBackgroundSize?: BreakpointsKey
-    /** @deprecated */
-    webkitBorderBottomLeftRadius?: BreakpointsKey
-    /** @deprecated */
-    webkitBorderBottomRightRadius?: BreakpointsKey
-    /** @deprecated */
-    webkitBorderRadius?: BreakpointsKey
-    /** @deprecated */
-    webkitBorderTopLeftRadius?: BreakpointsKey
-    /** @deprecated */
-    webkitBorderTopRightRadius?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxAlign?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxFlex?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxOrdinalGroup?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxOrient?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxPack?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxShadow?: BreakpointsKey
-    /** @deprecated */
-    webkitBoxSizing?: BreakpointsKey
-    /** @deprecated */
-    webkitFilter?: BreakpointsKey
-    /** @deprecated */
-    webkitFlex?: BreakpointsKey
-    /** @deprecated */
-    webkitFlexBasis?: BreakpointsKey
-    /** @deprecated */
-    webkitFlexDirection?: BreakpointsKey
-    /** @deprecated */
-    webkitFlexFlow?: BreakpointsKey
-    /** @deprecated */
-    webkitFlexGrow?: BreakpointsKey
-    /** @deprecated */
-    webkitFlexShrink?: BreakpointsKey
-    /** @deprecated */
-    webkitFlexWrap?: BreakpointsKey
-    /** @deprecated */
-    webkitJustifyContent?: BreakpointsKey
-    webkitLineClamp?: BreakpointsKey
-    /** @deprecated */
-    webkitMask?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskBoxImage?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskBoxImageOutset?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskBoxImageRepeat?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskBoxImageSlice?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskBoxImageSource?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskBoxImageWidth?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskClip?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskComposite?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskImage?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskOrigin?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskPosition?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskRepeat?: BreakpointsKey
-    /** @deprecated */
-    webkitMaskSize?: BreakpointsKey
-    /** @deprecated */
-    webkitOrder?: BreakpointsKey
-    /** @deprecated */
-    webkitPerspective?: BreakpointsKey
-    /** @deprecated */
-    webkitPerspectiveOrigin?: BreakpointsKey
-    webkitTapHighlightColor?: BreakpointsKey
-    /** @deprecated */
-    webkitTextFillColor?: BreakpointsKey
-    /** @deprecated */
-    webkitTextSizeAdjust?: BreakpointsKey
-    /** @deprecated */
-    webkitTextStroke?: BreakpointsKey
-    /** @deprecated */
-    webkitTextStrokeColor?: BreakpointsKey
-    /** @deprecated */
-    webkitTextStrokeWidth?: BreakpointsKey
-    /** @deprecated */
-    webkitTransform?: BreakpointsKey
-    /** @deprecated */
-    webkitTransformOrigin?: BreakpointsKey
-    /** @deprecated */
-    webkitTransformStyle?: BreakpointsKey
-    /** @deprecated */
-    webkitTransition?: BreakpointsKey
-    /** @deprecated */
-    webkitTransitionDelay?: BreakpointsKey
-    /** @deprecated */
-    webkitTransitionDuration?: BreakpointsKey
-    /** @deprecated */
-    webkitTransitionProperty?: BreakpointsKey
-    /** @deprecated */
-    webkitTransitionTimingFunction?: BreakpointsKey
-    /** @deprecated */
-    webkitUserSelect?: BreakpointsKey
-    whiteSpace?: BreakpointsKey
-    widows?: BreakpointsKey
-    width?: BreakpointsKey
-    willChange?: BreakpointsKey
-    wordBreak?: BreakpointsKey
-    wordSpacing?: BreakpointsKey
-    wordWrap?: BreakpointsKey
-    writingMode?: BreakpointsKey
-    zIndex?: BreakpointsKey
-    /** @deprecated */
-    zoom?: BreakpointsKey
-}
+// export type ICssPropertyKey = keyof CssProperty;
+// export interface CssProperty {
+//     alignContent?: IBreakpoints
+//     alignItems?: IBreakpoints
+//     alignSelf?: IBreakpoints
+//     alignmentBaseline?: IBreakpoints
+//     all?: IBreakpoints
+//     animation?: IBreakpoints
+//     animationDelay?: IBreakpoints
+//     animationDirection?: IBreakpoints
+//     animationDuration?: IBreakpoints
+//     animationFillMode?: IBreakpoints
+//     animationIterationCount?: IBreakpoints
+//     animationName?: IBreakpoints
+//     animationPlayState?: IBreakpoints
+//     animationTimingFunction?: IBreakpoints
+//     backfaceVisibility?: IBreakpoints
+//     background?: IBreakpoints
+//     backgroundAttachment?: IBreakpoints
+//     backgroundClip?: IBreakpoints
+//     backgroundColor?: IBreakpoints
+//     backgroundImage?: IBreakpoints
+//     backgroundOrigin?: IBreakpoints
+//     backgroundPosition?: IBreakpoints
+//     backgroundPositionX?: IBreakpoints
+//     backgroundPositionY?: IBreakpoints
+//     backgroundRepeat?: IBreakpoints
+//     backgroundSize?: IBreakpoints
+//     baselineShift?: IBreakpoints
+//     blockSize?: IBreakpoints
+//     border?: IBreakpoints
+//     borderBlockEnd?: IBreakpoints
+//     borderBlockEndColor?: IBreakpoints
+//     borderBlockEndStyle?: IBreakpoints
+//     borderBlockEndWidth?: IBreakpoints
+//     borderBlockStart?: IBreakpoints
+//     borderBlockStartColor?: IBreakpoints
+//     borderBlockStartStyle?: IBreakpoints
+//     borderBlockStartWidth?: IBreakpoints
+//     borderBottom?: IBreakpoints
+//     borderBottomColor?: IBreakpoints
+//     borderBottomLeftRadius?: IBreakpoints
+//     borderBottomRightRadius?: IBreakpoints
+//     borderBottomStyle?: IBreakpoints
+//     borderBottomWidth?: IBreakpoints
+//     borderCollapse?: IBreakpoints
+//     borderColor?: IBreakpoints
+//     borderImage?: IBreakpoints
+//     borderImageOutset?: IBreakpoints
+//     borderImageRepeat?: IBreakpoints
+//     borderImageSlice?: IBreakpoints
+//     borderImageSource?: IBreakpoints
+//     borderImageWidth?: IBreakpoints
+//     borderInlineEnd?: IBreakpoints
+//     borderInlineEndColor?: IBreakpoints
+//     borderInlineEndStyle?: IBreakpoints
+//     borderInlineEndWidth?: IBreakpoints
+//     borderInlineStart?: IBreakpoints
+//     borderInlineStartColor?: IBreakpoints
+//     borderInlineStartStyle?: IBreakpoints
+//     borderInlineStartWidth?: IBreakpoints
+//     borderLeft?: IBreakpoints
+//     borderLeftColor?: IBreakpoints
+//     borderLeftStyle?: IBreakpoints
+//     borderLeftWidth?: IBreakpoints
+//     borderRadius?: IBreakpoints
+//     borderRight?: IBreakpoints
+//     borderRightColor?: IBreakpoints
+//     borderRightStyle?: IBreakpoints
+//     borderRightWidth?: IBreakpoints
+//     borderSpacing?: IBreakpoints
+//     borderStyle?: IBreakpoints
+//     borderTop?: IBreakpoints
+//     borderTopColor?: IBreakpoints
+//     borderTopLeftRadius?: IBreakpoints
+//     borderTopRightRadius?: IBreakpoints
+//     borderTopStyle?: IBreakpoints
+//     borderTopWidth?: IBreakpoints
+//     borderWidth?: IBreakpoints
+//     bottom?: IBreakpoints
+//     boxShadow?: IBreakpoints
+//     boxSizing?: IBreakpoints
+//     breakAfter?: IBreakpoints
+//     breakBefore?: IBreakpoints
+//     breakInside?: IBreakpoints
+//     captionSide?: IBreakpoints
+//     caretColor?: IBreakpoints
+//     clear?: IBreakpoints
+//     clip?: IBreakpoints
+//     clipPath?: IBreakpoints
+//     clipRule?: IBreakpoints
+//     color?: IBreakpoints
+//     colorInterpolation?: IBreakpoints
+//     colorInterpolationFilters?: IBreakpoints
+//     columnCount?: IBreakpoints
+//     columnFill?: IBreakpoints
+//     columnGap?: IBreakpoints
+//     columnRule?: IBreakpoints
+//     columnRuleColor?: IBreakpoints
+//     columnRuleStyle?: IBreakpoints
+//     columnRuleWidth?: IBreakpoints
+//     columnSpan?: IBreakpoints
+//     columnWidth?: IBreakpoints
+//     columns?: IBreakpoints
+//     content?: IBreakpoints
+//     counterIncrement?: IBreakpoints
+//     counterReset?: IBreakpoints
+//     cssFloat?: IBreakpoints
+//     cssText?: IBreakpoints
+//     cursor?: IBreakpoints
+//     direction?: IBreakpoints
+//     display?: IBreakpoints
+//     dominantBaseline?: IBreakpoints
+//     emptyCells?: IBreakpoints
+//     fill?: IBreakpoints
+//     fillOpacity?: IBreakpoints
+//     fillRule?: IBreakpoints
+//     filter?: IBreakpoints
+//     flex?: IBreakpoints
+//     flexBasis?: IBreakpoints
+//     flexDirection?: IBreakpoints
+//     flexFlow?: IBreakpoints
+//     flexGrow?: IBreakpoints
+//     flexShrink?: IBreakpoints
+//     flexWrap?: IBreakpoints
+//     float?: IBreakpoints
+//     floodColor?: IBreakpoints
+//     floodOpacity?: IBreakpoints
+//     font?: IBreakpoints
+//     fontFamily?: IBreakpoints
+//     fontFeatureSettings?: IBreakpoints
+//     fontKerning?: IBreakpoints
+//     fontSize?: IBreakpoints
+//     fontSizeAdjust?: IBreakpoints
+//     fontStretch?: IBreakpoints
+//     fontStyle?: IBreakpoints
+//     fontSynthesis?: IBreakpoints
+//     fontVariant?: IBreakpoints
+//     fontVariantCaps?: IBreakpoints
+//     fontVariantEastAsian?: IBreakpoints
+//     fontVariantLigatures?: IBreakpoints
+//     fontVariantNumeric?: IBreakpoints
+//     fontVariantPosition?: IBreakpoints
+//     fontWeight?: IBreakpoints
+//     gap?: IBreakpoints
+//     glyphOrientationVertical?: IBreakpoints
+//     grid?: IBreakpoints
+//     gridArea?: IBreakpoints
+//     gridAutoColumns?: IBreakpoints
+//     gridAutoFlow?: IBreakpoints
+//     gridAutoRows?: IBreakpoints
+//     gridColumn?: IBreakpoints
+//     gridColumnEnd?: IBreakpoints
+//     gridColumnGap?: IBreakpoints
+//     gridColumnStart?: IBreakpoints
+//     gridGap?: IBreakpoints
+//     gridRow?: IBreakpoints
+//     gridRowEnd?: IBreakpoints
+//     gridRowGap?: IBreakpoints
+//     gridRowStart?: IBreakpoints
+//     gridTemplate?: IBreakpoints
+//     gridTemplateAreas?: IBreakpoints
+//     gridTemplateColumns?: IBreakpoints
+//     gridTemplateRows?: IBreakpoints
+//     height?: IBreakpoints
+//     hyphens?: IBreakpoints
+//     imageOrientation?: IBreakpoints
+//     imageRendering?: IBreakpoints
+//     inlineSize?: IBreakpoints
+//     justifyContent?: IBreakpoints
+//     justifyItems?: IBreakpoints
+//     justifySelf?: IBreakpoints
+//     left?: IBreakpoints
+//     readonly length?: number;
+//     letterSpacing?: IBreakpoints
+//     lightingColor?: IBreakpoints
+//     lineBreak?: IBreakpoints
+//     lineHeight?: IBreakpoints
+//     listStyle?: IBreakpoints
+//     listStyleImage?: IBreakpoints
+//     listStylePosition?: IBreakpoints
+//     listStyleType?: IBreakpoints
+//     margin?: IBreakpoints
+//     marginBlockEnd?: IBreakpoints
+//     marginBlockStart?: IBreakpoints
+//     marginBottom?: IBreakpoints
+//     marginInlineEnd?: IBreakpoints
+//     marginInlineStart?: IBreakpoints
+//     marginLeft?: IBreakpoints
+//     marginRight?: IBreakpoints
+//     marginTop?: IBreakpoints
+//     marker?: IBreakpoints
+//     markerEnd?: IBreakpoints
+//     markerMid?: IBreakpoints
+//     markerStart?: IBreakpoints
+//     mask?: IBreakpoints
+//     maskComposite?: IBreakpoints
+//     maskImage?: IBreakpoints
+//     maskPosition?: IBreakpoints
+//     maskRepeat?: IBreakpoints
+//     maskSize?: IBreakpoints
+//     maskType?: IBreakpoints
+//     maxBlockSize?: IBreakpoints
+//     maxHeight?: IBreakpoints
+//     maxInlineSize?: IBreakpoints
+//     maxWidth?: IBreakpoints
+//     minBlockSize?: IBreakpoints
+//     minHeight?: IBreakpoints
+//     minInlineSize?: IBreakpoints
+//     minWidth?: IBreakpoints
+//     objectFit?: IBreakpoints
+//     objectPosition?: IBreakpoints
+//     opacity?: IBreakpoints
+//     order?: IBreakpoints
+//     orphans?: IBreakpoints
+//     outline?: IBreakpoints
+//     outlineColor?: IBreakpoints
+//     outlineOffset?: IBreakpoints
+//     outlineStyle?: IBreakpoints
+//     outlineWidth?: IBreakpoints
+//     overflow?: IBreakpoints
+//     overflowAnchor?: IBreakpoints
+//     overflowWrap?: IBreakpoints
+//     overflowX?: IBreakpoints
+//     overflowY?: IBreakpoints
+//     overscrollBehavior?: IBreakpoints
+//     overscrollBehaviorBlock?: IBreakpoints
+//     overscrollBehaviorInline?: IBreakpoints
+//     overscrollBehaviorX?: IBreakpoints
+//     overscrollBehaviorY?: IBreakpoints
+//     padding?: IBreakpoints
+//     paddingBlockEnd?: IBreakpoints
+//     paddingBlockStart?: IBreakpoints
+//     paddingBottom?: IBreakpoints
+//     paddingInlineEnd?: IBreakpoints
+//     paddingInlineStart?: IBreakpoints
+//     paddingLeft?: IBreakpoints
+//     paddingRight?: IBreakpoints
+//     paddingTop?: IBreakpoints
+//     pageBreakAfter?: IBreakpoints
+//     pageBreakBefore?: IBreakpoints
+//     pageBreakInside?: IBreakpoints
+//     paintOrder?: IBreakpoints
+//     readonly parentRule?: CSSRule | null;
+//     perspective?: IBreakpoints
+//     perspectiveOrigin?: IBreakpoints
+//     placeContent?: IBreakpoints
+//     placeItems?: IBreakpoints
+//     placeSelf?: IBreakpoints
+//     pointerEvents?: IBreakpoints
+//     position?: IBreakpoints
+//     quotes?: IBreakpoints
+//     resize?: IBreakpoints
+//     right?: IBreakpoints
+//     rotate?: IBreakpoints
+//     rowGap?: IBreakpoints
+//     rubyAlign?: IBreakpoints
+//     rubyPosition?: IBreakpoints
+//     scale?: IBreakpoints
+//     scrollBehavior?: IBreakpoints
+//     shapeRendering?: IBreakpoints
+//     stopColor?: IBreakpoints
+//     stopOpacity?: IBreakpoints
+//     stroke?: IBreakpoints
+//     strokeDasharray?: IBreakpoints
+//     strokeDashoffset?: IBreakpoints
+//     strokeLinecap?: IBreakpoints
+//     strokeLinejoin?: IBreakpoints
+//     strokeMiterlimit?: IBreakpoints
+//     strokeOpacity?: IBreakpoints
+//     strokeWidth?: IBreakpoints
+//     tabSize?: IBreakpoints
+//     tableLayout?: IBreakpoints
+//     textAlign?: IBreakpoints
+//     textAlignLast?: IBreakpoints
+//     textAnchor?: IBreakpoints
+//     textCombineUpright?: IBreakpoints
+//     textDecoration?: IBreakpoints
+//     textDecorationColor?: IBreakpoints
+//     textDecorationLine?: IBreakpoints
+//     textDecorationStyle?: IBreakpoints
+//     textEmphasis?: IBreakpoints
+//     textEmphasisColor?: IBreakpoints
+//     textEmphasisPosition?: IBreakpoints
+//     textEmphasisStyle?: IBreakpoints
+//     textIndent?: IBreakpoints
+//     textJustify?: IBreakpoints
+//     textOrientation?: IBreakpoints
+//     textOverflow?: IBreakpoints
+//     textRendering?: IBreakpoints
+//     textShadow?: IBreakpoints
+//     textTransform?: IBreakpoints
+//     textUnderlinePosition?: IBreakpoints
+//     top?: IBreakpoints
+//     touchAction?: IBreakpoints
+//     transform?: IBreakpoints
+//     transformBox?: IBreakpoints
+//     transformOrigin?: IBreakpoints
+//     transformStyle?: IBreakpoints
+//     transition?: IBreakpoints
+//     transitionDelay?: IBreakpoints
+//     transitionDuration?: IBreakpoints
+//     transitionProperty?: IBreakpoints
+//     transitionTimingFunction?: IBreakpoints
+//     translate?: IBreakpoints
+//     unicodeBidi?: IBreakpoints
+//     userSelect?: IBreakpoints
+//     verticalAlign?: IBreakpoints
+//     visibility?: IBreakpoints
+//     /** @deprecated */
+//     webkitAlignContent?: IBreakpoints
+//     /** @deprecated */
+//     webkitAlignItems?: IBreakpoints
+//     /** @deprecated */
+//     webkitAlignSelf?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimation?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationDelay?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationDirection?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationDuration?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationFillMode?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationIterationCount?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationName?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationPlayState?: IBreakpoints
+//     /** @deprecated */
+//     webkitAnimationTimingFunction?: IBreakpoints
+//     /** @deprecated */
+//     webkitAppearance?: IBreakpoints
+//     /** @deprecated */
+//     webkitBackfaceVisibility?: IBreakpoints
+//     /** @deprecated */
+//     webkitBackgroundClip?: IBreakpoints
+//     /** @deprecated */
+//     webkitBackgroundOrigin?: IBreakpoints
+//     /** @deprecated */
+//     webkitBackgroundSize?: IBreakpoints
+//     /** @deprecated */
+//     webkitBorderBottomLeftRadius?: IBreakpoints
+//     /** @deprecated */
+//     webkitBorderBottomRightRadius?: IBreakpoints
+//     /** @deprecated */
+//     webkitBorderRadius?: IBreakpoints
+//     /** @deprecated */
+//     webkitBorderTopLeftRadius?: IBreakpoints
+//     /** @deprecated */
+//     webkitBorderTopRightRadius?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxAlign?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxFlex?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxOrdinalGroup?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxOrient?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxPack?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxShadow?: IBreakpoints
+//     /** @deprecated */
+//     webkitBoxSizing?: IBreakpoints
+//     /** @deprecated */
+//     webkitFilter?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlex?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlexBasis?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlexDirection?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlexFlow?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlexGrow?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlexShrink?: IBreakpoints
+//     /** @deprecated */
+//     webkitFlexWrap?: IBreakpoints
+//     /** @deprecated */
+//     webkitJustifyContent?: IBreakpoints
+//     webkitLineClamp?: IBreakpoints
+//     /** @deprecated */
+//     webkitMask?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskBoxImage?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskBoxImageOutset?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskBoxImageRepeat?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskBoxImageSlice?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskBoxImageSource?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskBoxImageWidth?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskClip?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskComposite?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskImage?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskOrigin?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskPosition?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskRepeat?: IBreakpoints
+//     /** @deprecated */
+//     webkitMaskSize?: IBreakpoints
+//     /** @deprecated */
+//     webkitOrder?: IBreakpoints
+//     /** @deprecated */
+//     webkitPerspective?: IBreakpoints
+//     /** @deprecated */
+//     webkitPerspectiveOrigin?: IBreakpoints
+//     webkitTapHighlightColor?: IBreakpoints
+//     /** @deprecated */
+//     webkitTextFillColor?: IBreakpoints
+//     /** @deprecated */
+//     webkitTextSizeAdjust?: IBreakpoints
+//     /** @deprecated */
+//     webkitTextStroke?: IBreakpoints
+//     /** @deprecated */
+//     webkitTextStrokeColor?: IBreakpoints
+//     /** @deprecated */
+//     webkitTextStrokeWidth?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransform?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransformOrigin?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransformStyle?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransition?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransitionDelay?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransitionDuration?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransitionProperty?: IBreakpoints
+//     /** @deprecated */
+//     webkitTransitionTimingFunction?: IBreakpoints
+//     /** @deprecated */
+//     webkitUserSelect?: IBreakpoints
+//     whiteSpace?: IBreakpoints
+//     widows?: IBreakpoints
+//     width?: IBreakpoints
+//     willChange?: IBreakpoints
+//     wordBreak?: IBreakpoints
+//     wordSpacing?: IBreakpoints
+//     wordWrap?: IBreakpoints
+//     writingMode?: IBreakpoints
+//     zIndex?: IBreakpoints
+//     /** @deprecated */
+//     zoom?: IBreakpoints
+// }
 

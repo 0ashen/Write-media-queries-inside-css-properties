@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "node": "node dist/index.js",
-    "typescript": "tsc"
+    "typescript": "tsc -w"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csstype": "^3.0.5"
+  }
 }
