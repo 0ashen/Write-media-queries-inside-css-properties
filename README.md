@@ -20,7 +20,17 @@ Output
         fontSize: 30px;
         width: 100px;
 }
-
-
 ```
-
+Set breakpoints
+```javascript
+const splitBreakpoints: IBreakpoints = {
+    all: '',
+    mb_tablet: '',
+    mb_mob: ''
+}
+const breakpoints = {
+    all: 'all',
+    mb_tablet: 1300,
+    mb_mob: 700
+}
+```
