@@ -1,5 +1,7 @@
 ## Write-media-queries-inside-css-properties
 
+Encapsulation media queries inside css property
+
 Usage example 
 ```typescript
     media({
