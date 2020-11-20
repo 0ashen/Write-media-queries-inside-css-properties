@@ -1,12 +1,12 @@
 ## Write-media-queries-inside-css-properties
 
-Encapsulation media queries inside css property
+Encapsulation media queries inside css property. Alpha version
 
 Usage example 
 ```typescript
     media({
-        fontSize: { all: '10px', mb_tablet: '20px', mb_mob: '30px'},
-        width: {all: '200px', mb_tablet: '150px', mb_mob: '100px'}
+        fontSize: { all: '10px', tablet: '20px', mobile: '30px'},
+        width: {all: '200px', tablet: '150px', mobile: '100px'}
     })
 ```
 Output
@@ -27,17 +27,17 @@ Set breakpoints
 ```typescript
 export interface IBreakpoints {
     all?: CssPropertyValue
-    mb_tablet?: CssPropertyValue
-    mb_mob?: CssPropertyValue
+    tablet?: CssPropertyValue
+    mobile?: CssPropertyValue
 }
 const splitBreakpoints: IBreakpoints = {
     all: '',
-    mb_tablet: '',
-    mb_mob: ''
+    tablet: '',
+    mobile: ''
 }
 const breakpoints = {
     all: 'all',
-    mb_tablet: 1300,
-    mb_mob: 700
+    tablet: 1300,
+    mobile: 700
 }
 ```
