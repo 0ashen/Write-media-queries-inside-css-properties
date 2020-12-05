@@ -1,6 +1,6 @@
 ## Write-media-queries-inside-css-properties
 
-Encapsulation media queries inside css property. Alpha version
+Alpha version
 
 Usage example 
 ```typescript
